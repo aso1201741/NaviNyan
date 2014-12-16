@@ -1,0 +1,38 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    	<item name="android:actionBarStyle">@style/actionBar</item>
+    </style>
+
+    <style name="actionBar" parent="android:style/Widget.Holo.Light.ActionBar">
+		 <!-- タイトルバーの背景色 -->
+		 <item name="android:background">#00BFFF</item>
+		 <!-- タイトルバーの文字スタイル -->
+		 <item name="android:titleTextStyle">@style/titleTextStyle</item>
+		 
+	</style>
+		
+	<style name="titleTextStyle">
+		 <!-- タイトルバーの文字色 -->
+		 <item name="android:textColor">#FFFFFF</item>
+		 <!-- タイトルバーの文字スタイル -->
+		 <item name="android:textStyle">italic</item>
+		 
+		 <item name="android:textSize">13pt</item>
+	</style>
+    
+</resources>

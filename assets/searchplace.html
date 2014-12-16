@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	html { height: 100% }
+	body { height: 100%; margin: 0; padding: 0 }
+	#gmap { height: 100%; width: 100% }
+</style>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+var latlng;
+var mapObj;
+var marker;
+
+function initialize(){
+	latlng = new google.maps.LatLng(33.583713444187154,130.4211486876011);
+	var mapOptions = {
+		zoom: 16,
+		center: latlng,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		mapTypeControl: false,
+		zoomControl: false,
+		streetViewControl: false,
+		panControl: false
+	};
+	mapObj = new google.maps.Map(document.getElementById('gmap'),mapOptions);
+	marker = new google.maps.Marker({
+		map: mapObj,
+		position: latlng
+	});
+	
+  	google.maps.event.addListener(mapObj, 'click', function(event) {
+    	var ll = new google.maps.LatLng(event.latLng.lat(),event.latLng.lng());
+    	mapObj.setCenter(ll);
+    	marker.setOptions({position: ll});
+  	});
+	
+}
+
+google.maps.event.addDomListener(window,'load',initialize);
+
+function setPlace(address){
+
+	var geocoder = new google.maps.Geocoder();
+	geocoder.geocode({'address': address},function(results,status){
+		if(status == google.maps.GeocoderStatus.OK){
+			mapObj.setCenter(results[0].geometry.location);
+			marker.setOptions({
+				position: results[0].geometry.location
+			});
+		}else{
+			console.log('Geocode was not successful for the following reason: ' + status);
+		}
+	});
+}
+
+function getPlace(){
+	var lat = marker.getPosition().lat();
+	var lng = marker.getPosition().lng();
+	document.location = "navinyan://getplace/" + lat + "," + lng;
+}
+</script>
+</head>
+<body>
+<div id="gmap"></div>
+</body>
+</html>

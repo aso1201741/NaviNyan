@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="コンビニ"
+        android:textSize="15pt"
+        android:background="#87ceeb"
+        android:id="@+id/genre_l_conv" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="レストラン"
+        android:textSize="15pt"
+        android:background="#ffbb33"
+        android:id="@+id/genre_l_rest" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="レジャー"
+        android:textSize="15pt"
+        android:background="#ffb6c1"
+        android:id="@+id/genre_l_leis" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="アミューズメント"
+        android:textSize="15pt"
+        android:background="#fa8072"
+        android:id="@+id/genre_l_amus" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="風景・建物"
+        android:textSize="15pt"
+        android:background="#7fff7f"
+        android:id="@+id/genre_l_buil" />
+
+</LinearLayout>

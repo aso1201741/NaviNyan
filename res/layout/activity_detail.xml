@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	    
+	
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="20sp"
+	        android:textSize="16pt"
+	        android:text="龍の家"
+	        android:id="@+id/detail_name" />
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="10sp"
+	        android:textSize="14pt"
+	        android:text="Tel:0942-xx-xxxx"
+	        android:id="@+id/detail_tel" />
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="10sp"
+	        android:textSize="12pt"
+	        android:text="住所:"
+	        android:id="@+id/detail_address" />
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="10sp"
+	        android:textSize="12pt"
+	        android:text="営業時間:"
+	        android:id="@+id/detail_time" />
+	    
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="10sp"
+	        android:textSize="12pt"
+	        android:text="駐車場:"
+	        android:id="@+id/detail_parking" />
+	
+	</LinearLayout>
+</ScrollView>
